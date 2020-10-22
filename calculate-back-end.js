@@ -32,11 +32,26 @@ function calculate(num1, num2, operation) {
     return `Sorry, that's not a mathematical operation!`
   }
 
-  /* Or, instead of using the if/else chain above, we can use
-   * a switch, preferably with fall through to save code.
-   * The switch's simplicity means we don't have to save our
-   * boolean checks into variables, which was mostly to avoid
-   * long compound if checks. */
+  // Alternate no-intermediate-variables version.
+  if (operation === '+' || operation === 'plus' || operation === 'added to') {
+    return num1 + num2;
+  } else if (operation === '-' || operation === 'minus') {
+    return num1 - num2;
+  } else if (operation.toLowerCase() === 'x' || operation === 'times' || operation === 'multiplied by') {
+    return num1 * num2;
+  } else if (operation === '/' || operation === 'divided by') {
+    return num1 / num2;
+  } else if (operation === '%' || operation === 'modulus' || operation === 'mod') {
+    return num1 % num2;
+  } else {
+    return `Sorry, that's not a mathematical operation!`
+  }
+
+  /* Or, instead of either of the if/else chains above, we can use
+   * a switch, preferably with fall-through to save code.
+   * The switch's simplicity means we don't have to choose between
+   * saving our boolean checks into variables or having long code.
+ */
 
   // switch(operation.toLowerCase()) {
   //   case 'added to':
