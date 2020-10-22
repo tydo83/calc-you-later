@@ -67,11 +67,6 @@ describe('calculate', () => {
     expect(calculate('3', '51', 'added to')).toBe(54)
   })
   
-  it(`allows for the words 'subtracted from' in subtraction`, () => {
-    expect(calculate('3', '5', 'subtracted from')).toBe(-2)
-    expect(calculate('31', '5', 'subtracted from')).toBe(26)
-  })
-
   it(`allows for the words 'multiplied by' in division`, () => {
     expect(calculate('3', '5', 'multiplied by')).toBe(15)
     expect(calculate('3', '50', 'multiplied by')).toBe(150)

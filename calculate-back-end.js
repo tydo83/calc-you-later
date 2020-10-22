@@ -9,17 +9,14 @@ function calculate(num1, num2, operation) {
   num2 = Number(num2);
 
   //The variables are not at all necessary, but they do make the code more readable.
-
   const isAddition = operation === '+' || operation === 'plus' || operation === 'added to';
-  // 'subtracted from' is the wrong direction, and future tests will reflect this.
-  // Management apologizes for the error and any subsequent mishaps that occurred from this faulty subtraction.
-  const isSubtraction = operation === '-' || operation === 'minus' || operation === 'subtracted from';
+  const isSubtraction = operation === '-' || operation === 'minus';
   const isMultiplication = operation.toLowerCase() === 'x' || operation === 'times' || operation === 'multiplied by';
   const isDivision = operation === '/' || operation === 'divided by';
   const isModulus = operation === '%' || operation === 'modulus' || operation === 'mod';
 
-  // Without the variables above, the if/else chain is enough by itself.
-  // But then the boolean checks get very long.
+  // We don't need the variables above.
+  // But then the boolean checks inside these parens get VERY long.
   // Up to you!
   if (isAddition) {
     return num1 + num2;
